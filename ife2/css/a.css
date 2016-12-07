@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1.5 "Microsoft YaHei";
+	color: #939393;
+	min-width: 1200px;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	margin: 0 auto;
+	width: 90%;/*1080px*/
+}
+
+header {
+	padding: 1%;
+}
+header div {
+	width: 20%;
+	display: inline-block;
+}
+header nav {
+	float: right;
+}
+header li {
+	display: inline-block;
+	
+
+}
+header li a {
+	color: #939393;
+}
