@@ -1,0 +1,375 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1.5 "Microsoft YaHei";
+	color: #939393;
+	min-width: 1280px;
+	width: 100%;	
+}
+a {
+	text-decoration: none;
+}
+.container {
+	margin: 0 auto;
+	width: 100%;/*1080px*/
+}
+/*页眉*/
+header {
+	font-size: 16px;
+	padding: 1%;
+}
+header div {
+	width: 20%;
+	display: inline-block;
+}
+header nav {
+	float: right;
+	margin-right: 2%;
+}
+header li {
+	display: inline-block;
+	
+
+}
+header li a {
+	color: #939393;
+}
+
+/*第一部分*/
+.one {
+	width: 100%;
+	height: 721px;
+	background-image:url(../images/big-bg.png);
+    background-size: cover;
+    position: relative;
+}
+.newlife {
+	position: absolute;
+	width: 40%;
+	height: 30%;/*0.3*721=216.3 */
+	top: 30%;
+	left: 10%;
+    color: #fff;
+}
+.newlife h1 {
+	font-size: 500%;/* 12*5=60px */
+	font-weight: normal;
+}
+.newlife p {
+	font-size: 150%;/*px*/
+	width: 60%;
+}
+/*特殊按钮*/
+.newlife button {
+	width: 65%;
+	height: 25%;
+	margin-top: 10%;
+	font-size: 250%;
+}
+/*按钮统一样式*/
+.newlife button, .picture button {
+	border: none;
+	background-color: #E74F4D;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+	cursor: pointer;
+	transition: color 2s;
+}
+button:hover {
+	border: 1px #e74f4d solid;
+	color: #e74f4d;
+	background-color: transparent;
+}
+
+/*intro 第二部分*/
+.intro {
+	width: 100%;
+}
+.intro ul{
+	width: 100%;
+	margin: 30px 0;
+	display: flex;
+	justify-content: space-around;/*默认水平主轴方向，水平两端对齐*/
+
+}
+.intro li {
+	width: 25%;
+	height: 150px;
+	display: flex;
+	text-align: center;
+	justify-content: space-around;/*主轴方向两端对齐*/
+	align-items: center;
+	flex-direction: column;/*规定主轴方向*/
+}
+/*同时规定width、padding*/
+.intro li p {
+	width: 45%;/*若不规定width，在IE、chrome上会出错*/
+	padding: 0 27.5%;/*让P居中*/
+	border-right: 1px solid #939393;
+}
+.intro li:last-child p {
+	border-right: none;
+}
+
+/*第三部分 biglogo*/
+.biglogo {
+	width: 100%;
+	height: 300px;
+	background-color: #EDEDEC;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 450%;
+	color: #c3c3c3;
+}
+.biglogo img {
+	margin-bottom: 10px;
+}
+.biglogo p {
+	margin-top: 10px;
+}
+
+
+/*第四部分 城市活动*/
+.city {
+	background-image: url(../images/city.png);
+	background-size: cover;
+	width: 100%;
+	height: 341px;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-around;
+}
+
+.city h2{
+	font-size: 180%;
+}
+.city div.under {
+	width: 3%;
+	background-color: #fff;
+	height: 3px;
+	margin: 0 48.5%;
+}
+.city p {
+	font-size: 120%;
+}
+.city form {
+	display: flex;
+	justify-content: center;
+}
+.city select {
+	width: 20%;
+	height: 30px;
+}
+
+/*第五部分*/
+.active {
+	display: flex;
+	justify-content: space-around;
+	margin: 5% 5%;
+	height: 400px;
+	overflow: hidden;
+}
+.active img {
+	padding: 3%;
+	border: 1px solid #EDEDEC;	
+}
+.active h3, .active p {
+	text-align: center;
+	margin: 5px;
+}
+.active div:hover h3 {
+	font-size: 200%;
+	transition: all 2s;
+}
+
+/*第六部分 轮播图*/
+.picture {
+	position: relative;
+	width: 100%;
+	height: 566px;
+
+}
+  /*图片适应*/
+.picture img {
+	width: 66.5%;
+	height: 100%;
+}
+.picture .bg-img {
+	position: absolute;
+	width: 25%;
+	height: 400px;
+	top: 20%;
+	left: 21%;
+	color: #fff;
+	font-size: 300%;
+	text-align: center;
+	line-height: 1;
+	
+}
+.picture .bg-img h1 {
+	font-size: 350%;
+	font-weight: normal;
+}
+.picture .bg-img h3 {
+	font-weight: normal;
+}
+.picture .bg-img p {
+	font-size: 50%;
+	line-height: 2;
+}
+.picture div + div {
+	color: #c3c3c3;
+	width: 25%;
+	height: 567px;
+	position: absolute;
+	right: 4.2%;
+	top: 22%;
+	text-align: center;
+	line-height: 2.5;
+}
+.picture div + div h2 {
+	font-size: 170%;
+	color: #4b4b4b;
+}
+.picture div + div p {
+	font-size: 100%;
+	text-align: left;
+}
+.picture div + div h2 span {
+	color: #e74f4d;
+}
+.picture div + div button {
+	width: 40%;
+	height: 40px;
+	margin-top: 10%;
+}
+/*轮播图控制点*/
+.picture div + div ul {
+	margin: 10%;
+	height: 30px;
+}
+.picture div + div ul li {
+	list-style: none;
+	border-radius: 50%;
+	display: inline-block;
+	width: 5%;
+	height: 40%;
+	border: 1px solid #E1E1E1;
+	margin: 2%;
+	cursor: pointer;
+}
+.picture div + div ul li:hover,
+.picture div + div ul li:active {
+	background-color: #E1E1E1;
+}
+/*小三角*/
+.picture .hook {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	border-style:solid;
+	border-color: transparent #fff transparent transparent;
+	border-width: 12px 20px 12px 20px;
+	position: absolute;
+	left: 63.5%;/*缩放时位置会改变，怎么解决*/
+	top: 50%;
+}
+
+
+/*第七部分 more*/
+.more {
+	display: flex;
+	width: 100%;
+	height: 100%;/*521px*/
+	position: relative;
+}
+.more .red,.more .white {
+	width: 33.3%;
+	text-align: center;
+	line-height: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*直接用px表示则不会出错*/
+}
+.more .red {
+	background-color: #E74F4D;
+	color: #fff;
+	text-align: center;
+}
+.more img {
+	width: 33.3%;
+	height: 100%;
+}
+.more h3 {
+	font-size: 150%;
+	font-weight: normal;
+}
+	/*横线样式*/
+.more div span {
+	width: 10%;
+	height: 2px;
+	display: block;
+	text-align: center;
+	margin: 4% auto;
+}
+.more .red span {
+	background-color: #fff;
+}
+.more .white span {
+	background-color: #e74f4d;
+}
+.more div:hover span {
+	width: 37%;
+	transition: width 1s;
+}
+/*按钮样式*/
+.more button {
+	background-color: transparent;
+	width: 30%;
+	height: 7%;
+	font-size: 140%;
+	cursor: pointer;
+	margin-top: 3%;
+	margin-left: 35%;
+	transition: all 2s;
+}
+.more .red button {
+	border: 1px white solid;
+	color: white;
+}
+.more .red button:hover {
+	color: #e74f4d;
+	background-color: #fff;
+}
+.more .white button {
+	border: 1px solid #e74f4d;
+	color: #e74f4d;
+}
+.more .white button:hover {
+	background-color: #e74f4d;
+	color: #fff;
+}
+
+span.hook {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	border-style:solid;
+	border-color: transparent transparent transparent #fff;
+	border-width: 12px 20px 12px 20px;
+	position: absolute;
+	/*若定义right，则缩放时会错位*/
+	left: 66.6%;
+	top: 50%;
+}
+/**/
+/**/
+/**/
