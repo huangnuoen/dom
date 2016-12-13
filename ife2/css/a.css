@@ -69,7 +69,7 @@ header li a {
 	font-size: 250%;
 }
 /*按钮统一样式*/
-button {
+.newlife button, .picture button {
 	border: none;
 	background-color: #E74F4D;
 	font-family: "Microsoft YaHei";
@@ -193,6 +193,13 @@ button:hover {
 .picture {
 	position: relative;
 	width: 100%;
+	height: 566px;
+
+}
+  /*图片适应*/
+.picture img {
+	width: 66.5%;
+	height: 100%;
 }
 .picture .bg-img {
 	position: absolute;
@@ -223,7 +230,7 @@ button:hover {
 	height: 567px;
 	position: absolute;
 	right: 4.2%;
-	top: 25%;
+	top: 22%;
 	text-align: center;
 	line-height: 2.5;
 }
@@ -246,15 +253,16 @@ button:hover {
 /*轮播图控制点*/
 .picture div + div ul {
 	margin: 10%;
+	height: 30px;
 }
 .picture div + div ul li {
 	list-style: none;
 	border-radius: 50%;
 	display: inline-block;
 	width: 5%;
-	height: 12px;
+	height: 40%;
 	border: 1px solid #E1E1E1;
-	margin: 1%;
+	margin: 2%;
 	cursor: pointer;
 }
 .picture div + div ul li:hover,
@@ -262,7 +270,7 @@ button:hover {
 	background-color: #E1E1E1;
 }
 /*小三角*/
-.picture .to {
+.picture .hook {
 	width: 0;
 	height: 0;
 	background-color: transparent;
@@ -270,10 +278,98 @@ button:hover {
 	border-color: transparent #fff transparent transparent;
 	border-width: 12px 20px 12px 20px;
 	position: absolute;
-	left: 812px;
+	left: 63.5%;/*缩放时位置会改变，怎么解决*/
 	top: 50%;
 }
-/**/
+
+
+/*第七部分 more*/
+.more {
+	display: flex;
+	width: 100%;
+	height: 100%;/*521px*/
+	position: relative;
+}
+.more .red,.more .white {
+	width: 33.3%;
+	text-align: center;
+	line-height: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*直接用px表示则不会出错*/
+}
+.more .red {
+	background-color: #E74F4D;
+	color: #fff;
+	text-align: center;
+}
+.more img {
+	width: 33.3%;
+	height: 100%;
+}
+.more h3 {
+	font-size: 150%;
+	font-weight: normal;
+}
+	/*横线样式*/
+.more div span {
+	width: 10%;
+	height: 2px;
+	display: block;
+	text-align: center;
+	margin: 4% auto;
+}
+.more .red span {
+	background-color: #fff;
+}
+.more .white span {
+	background-color: #e74f4d;
+}
+.more div:hover span {
+	width: 37%;
+	transition: width 1s;
+}
+/*按钮样式*/
+.more button {
+	background-color: transparent;
+	width: 30%;
+	height: 7%;
+	font-size: 140%;
+	cursor: pointer;
+	margin-top: 3%;
+	margin-left: 35%;
+	transition: all 2s;
+}
+.more .red button {
+	border: 1px white solid;
+	color: white;
+}
+.more .red button:hover {
+	color: #e74f4d;
+	background-color: #fff;
+}
+.more .white button {
+	border: 1px solid #e74f4d;
+	color: #e74f4d;
+}
+.more .white button:hover {
+	background-color: #e74f4d;
+	color: #fff;
+}
+
+span.hook {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+	border-style:solid;
+	border-color: transparent transparent transparent #fff;
+	border-width: 12px 20px 12px 20px;
+	position: absolute;
+	/*若定义right，则缩放时会错位*/
+	left: 66.6%;
+	top: 50%;
+}
 /**/
 /**/
 /**/
