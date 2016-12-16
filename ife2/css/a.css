@@ -11,14 +11,20 @@ body {
 a {
 	text-decoration: none;
 }
+li {
+	list-style: none;
+}
+
 .container {
 	margin: 0 auto;
 	width: 100%;/*1080px*/
 }
+
 /*页眉*/
 header {
 	font-size: 16px;
-	padding: 1%;
+	height: 100%;
+	width: 100%;
 }
 header div {
 	width: 20%;
@@ -30,13 +36,15 @@ header nav {
 }
 header li {
 	display: inline-block;
-	
+	padding: 1%;
 
 }
 header li a {
 	color: #939393;
 }
-
+header li:hover {
+    border-bottom: 3px solid #e74f4d;
+}
 /*第一部分*/
 .one {
 	width: 100%;
@@ -64,7 +72,7 @@ header li a {
 /*特殊按钮*/
 .newlife button {
 	width: 65%;
-	height: 25%;
+	height: 27%;
 	margin-top: 10%;
 	font-size: 250%;
 }
@@ -370,6 +378,195 @@ span.hook {
 	left: 66.6%;
 	top: 50%;
 }
+
+
+/*第八部分 志愿者*/
+.join {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+	/*描述部分*/
+.join-desc {
+	font-size: 130%;
+	width: 27%;
+	margin: 5% auto;
+}
+.join-desc p {
+	font-size: 70%;
+}
 /**/
-/**/
-/**/
+.join-in {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+}
+.join-in .join-rule {
+	width: 33.3%;
+	margin: 0 5%;
+	text-align: left;
+	font-size: 90%;
+}
+	/*前面两条占40%*/
+.join-rule div {
+	height: 40%;
+}
+.join-rule div:last-child {
+	height: 20%;
+}
+.join-rule div h4 {
+	font-size: 120%;
+	margin-bottom: 7%;
+}
+.join-rule div span {
+	float: right;
+	padding-left: 15px;
+	background: url(../images/task_1_6_1_0000s_0001s_0000__----_.png) no-repeat 0 center;
+}
+/*表单*/
+.join-apply form {
+	width: 100%;
+	/*display: flex;
+	justify-content: flex-start;*/
+}
+.join-apply input {
+	width: 46%;
+	height: 25px;
+	padding: 1%;
+	margin-bottom: 10px;
+	background-color: #ECEDEE;
+	border: none;
+	border-radius: 3px;
+	text-indent: 1em;
+}
+.join-apply input:nth-child(2n) {
+    margin-left: 3%;
+}
+.join-apply textarea {
+	background-color: #ECEDEE;
+	border: none;
+	width: 98%;
+	padding: 1%;
+	border-radius: 3px;
+}
+.join-apply button {
+	background-color: #ECEDEE;
+	border: none;
+	width: 100%;
+	font-size: 130%;
+	font-family: "Microsoft YaHei";
+	line-height: 2;
+	margin-top: 1%;
+	border-radius: 3px;
+}
+	/*占位符样式*/
+form input::-webkit-input-placeholder {
+	/*chrome/opera/safari*/
+	color: #6C6564;
+}
+form input::-moz-placeholder {
+	/*firefox 19+*/
+	color: #6C6564;
+	opacity: 1;
+}
+form input:-ms-input-placeholder {
+	/*ie 10+*/
+	color: #6C6564;
+}
+form input:-moz-placeholder {
+	/*firefox 18-*/
+	color: #6C6564;
+	opacity: 1;
+}
+form textarea::-webkit-input-placeholder {
+	/*chrome/opera/safari*/
+	color: #6C6564;
+}
+form textarea::-moz-placeholder {
+	/*firefox 19+*/
+	color: #6C6564;
+	opacity: 1;
+}
+form textarea:-ms-input-placeholder {
+	/*ie 10+*/
+	color: #6C6564;
+}
+form textarea:-moz-placeholder {
+	/*firefox 18-*/
+	color: #6C6564;
+	opacity: 1;
+}
+
+
+/*联系我们*/
+.contact {
+	color: #fff;
+	background-color: #000;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 130%;
+	padding-top: 5%;
+}
+.contact h2, .contact p, .contact form, .contact ul {
+	width: 40%;
+}
+.contact h2 {
+	font-weight: normal;
+	line-height: 2;
+}
+.contact p {
+	margin-bottom: 3%;
+	font-size: 80%;
+}
+.contact form {
+	position: relative;
+	height: 100%;
+}
+.contact form input {
+	width: 100%;
+	height: 90%;
+	padding: 1%;
+	border: none;
+}
+.contact form button {
+	position: absolute;
+	bottom: 0;
+	right: -4%;
+	border: none;
+	width: 15%;
+	height: 100%;
+	line-height: 1;
+	background-color: #777;
+	color: #fff;
+	font-family: "Microsoft YaHei";
+}
+/*联系方式*/
+.contact ul {
+	margin: 40px 0 60px;
+}
+.contact .way li {
+	display: inline-block;
+	width: 10%;
+}
+
+/*footer*/
+footer {
+	background-color: #000;
+	color: #fff;
+	padding: 0 5%;
+}
+footer p {
+	display: inline-block;
+
+}
+footer .back {
+	margin-left: 87%;
+}
+footer a {
+	color: #fff;
+}

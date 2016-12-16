@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <!--导航-->
-    	<header>
+    	<header id="top">
     		<div class="logo">
     		    <img src="images/mini-logo.png">
     		    新世界
@@ -20,7 +20,7 @@
     				<li><a href="#">项目介绍</a></li>
     				<li><a href="#">爱心社区</a></li>
     				<li><a href="#">关于我们</a></li>
-    				<li class="signin"><a href="#"><img src="images/sign.png" >登录</a></li>
+    				<li class="signin">登录</li>
     			</ul>
     		</nav>
     	</header>
@@ -166,7 +166,7 @@
         	    	<form action="" method="get">
         	    		<input type="text" value="name" placeholder="姓名：">
         	    		<input type="text" value="age" placeholder="年龄：">
-        	    		<input type="text" value="phone" placeholder="联系方式：">
+        	    		<input type="text" value="tel" placeholder="联系方式：">
         	    		<input type="address" value="addr" placeholder="地址：">
         	    		<textarea name="discrib" cols="30" rows="10" placeholder="请简单描述你的梦想："></textarea>
         	    		<button class="sumbit">提交申请</button>
@@ -177,23 +177,23 @@
 
         <!--联系我们-->
         <section class="contact">
-        	<h3>联系我们</h3>
+        	<h2>联系我们</h2>
         	<p>为了更好的获取我们最新产品资讯，您可以留下你的电子邮箱快速订阅我们的产品资讯<span>也可以通过以下任何方式关注我们的动态</span></p>
         	<form action="" method="get" class="email">
-        	    <input type="email" name="email" value="someone@email.com">
-        	    <input type="button" value="提交">
+        	    <input type="email" name="email" value="someone@email.com" placeholder="someone@email.com">
+        	    <button>提交</button>
         	</form>
             <ul class="way">
-            	<li></li>
-            	<li></li>
-            	<li></li>
-            	<li></li>
+            	<li><img src="images/way1.png"></li>
+            	<li><img src="images/way2.png"></li>
+            	<li><img src="images/way3.png"></li>
+            	<li><img src="images/way4.png"></li>
             </ul>
         </section>
         <!--页脚-->
     	<footer>
     		<p>@2016新世界</p>
-    		<p id="back">back to top</p>
+    		<p class="back"><a href="#top">back to top</a></p>
     	</footer>
     </div>
 </body>
