@@ -1,0 +1,30 @@
+/*垂直居中，用绝对定位和负外边距*/
+#box {
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	margin: auto;
+	position: absolute;/*相对于body定位*/
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+}
+.left {
+	background-color: orange;
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.right{
+	background-color: orange;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px 0 0 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
