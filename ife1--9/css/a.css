@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 216760 */
+  src: url('//at.alicdn.com/t/font_70lqv6ojcstqehfr.eot');
+  src: url('//at.alicdn.com/t/font_70lqv6ojcstqehfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_70lqv6ojcstqehfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_70lqv6ojcstqehfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_70lqv6ojcstqehfr.svg#iconfont') format('svg');
+}
+.iconfont{ 
+	font-family:"iconfont"; 
+	font-size:16px;
+	font-style:normal; 
+	-webkit-font-smoothing: antialiased; 
+	-webkit-text-stroke-width: 0.2px; 
+	-moz-osx-font-smoothing: grayscale;
+}
+ul,li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-size: 12px;
+	font-family: "SimHei","Microsoft Yahei","Arial";
+	background: #eeedec;
+}
+
+/*头部样式*/
+header {
+	background-color: #247cca;
+	height: 56px;
+	/*没设置最小宽度时，浏览器放大时header的宽度会等于窗口宽度，不会扩展到滚动条外*/
+	min-width: 1280px;
+	width: 100%;
+	        box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 120%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header>img {
+	margin-left: 2%;
+}
+header form {
+	margin-left: 52%;
+}
+header form input {
+	width: 278px;
+	height: 28px;
+	border: none;
+	border-radius: 20px;
+	padding-left: 35px;
+	background: url(../images/search.png) no-repeat 15px center;
+	background-color: #fff;
+}
+header .signin {
+	margin-right: 10%;
+}
+
+/*内容*/
+section.wrapper {
+	width: 1280px;/*固定宽度*/
+	margin: 0 auto;
+	display: flex;
+}
+/*边栏*/
+aside {
+	width: 260px;
+	background-color: #393e4e;
+	color: #6e8095;
+}
+aside div {
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
+}
+aside div img {
+	border: 1px solid #fff;
+	padding: 3px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+aside div span {
+	font-size: 200%;
+	line-height: 1;
+	color: #fff;
+}
+aside>ul li {
+	display: inline-block;
+}
+/*主要内容*/
+section.main {
+	width: 1020px;
+}
