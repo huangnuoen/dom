@@ -4,11 +4,11 @@
 }
 @font-face {
   font-family: 'iconfont';  /* project id 216760 */
-  src: url('//at.alicdn.com/t/font_30oob05lddjthuxr.eot');
-  src: url('//at.alicdn.com/t/font_30oob05lddjthuxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_30oob05lddjthuxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_30oob05lddjthuxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_30oob05lddjthuxr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_uxp9gjkb1wlmobt9.eot');
+  src: url('//at.alicdn.com/t/font_uxp9gjkb1wlmobt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_uxp9gjkb1wlmobt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_uxp9gjkb1wlmobt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_uxp9gjkb1wlmobt9.svg#iconfont') format('svg');
 }
 .iconfont{ 
 	font-family: "iconfont"; 
@@ -32,7 +32,41 @@ body {
 	font-family: "SimHei","Microsoft Yahei","Arial";
 	background: #eeedec;
 }
+/*button样式*/
+button.btn-search {
+	border: none;
+	background-color: #247cca;
+	color: #fff;
+	width: 51px;
+	height: 26px;
+}
+/*select样式*/
+select {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	height: 22px;
+	padding: 3px 10px 3px 5px;
+	margin-right: 18px;
+	border-color: #c2c2c2;
+	background: url(../images/blackhook.png) no-repeat 45px center;
+	color: #000;
+	font-size: 100%;
+	font-family: "黑体";
+}
+/*右侧正文4个模块面板样式*/
+.grid {
+	border: 1px solid #c2c2c2;
+	border-radius: 5px;
+	background-color: #fff;
+	font-size: 140%;
 
+}
+.grid h5 {
+	background-color: #eeedec;
+	padding: 10px 0 10px 20px;
+	font-size: 90%;
+}
 /*头部样式*/
 header {
 	background-color: #247cca;
@@ -44,7 +78,6 @@ header {
 	   -moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	padding: 10px 20px;
-	color: #fff;
 	font-size: 120%;
 	display: flex;
 	justify-content: space-between;
@@ -67,6 +100,9 @@ header form input {
 }
 header .signin {
 	margin-right: 10%;
+}
+.signin a {
+	color: #fff;
 }
 
 /*内容*/
@@ -138,4 +174,119 @@ aside .index ul a.selected {
 /*主要内容*/
 section.main {
 	width: 1020px;
+	color: #c2c2c2;
+	font-size: 100%;
+}
+
+
+
+.main nav {
+	box-sizing: border-box;/*使得宽度加上内边距后不会溢出*/
+	width: 100%;
+	padding: 9px 0 9px 28px;
+	background-color: #fff;
+}
+nav span {
+	color: #247cca;
+}
+.main-content {
+	padding: 20px 73px 0 56px;
+}
+/*上方搜索*/
+.lookfor {
+	box-sizing: border-box;
+	width: 890px;
+	height: 86px;
+	padding: 15px 25px;
+	margin-bottom: 8px;
+	font-size: 100%;
+}
+.lookfor form {
+	display: flex;
+	box-sizing: border-box;
+}
+.lookfor form div {
+	box-sizing: border-box;
+}
+.loodfor form label {
+	text-align: center;
+}
+.lookfor select {
+	margin-left: 7px;
+	width: 65px;
+	margin-bottom: 5px;	
+}
+select.blue {
+	background-image: url(../images/bluehook.png);
+}
+.lookfor div.sold {
+	display: flex;
+	flex-flow: column wrap;
+	width: 200px;
+}
+.lookfor div.sold div select {
+	width: 120px;
+	background-position: 100px center;
+}
+.lookfor div:last-of-type {
+	width: 330px;
+}
+.lookfor div:last-of-type select:first-of-type,
+.lookfor div:last-of-type select:last-of-type {
+	width: 120px;
+	background-position: 100px center;
+}
+.lookfor button {
+	margin-top: 14px;
+}
+
+/*价格显示部分*/
+.result ul {
+    display: flex;
+    justify-content: space-between;
+}
+.result ul li {
+	box-sizing: border-box;
+	background-color: #fff;
+	height: 60px;
+	border: 1px solid #c2c2c2;
+	border-radius: 0 0 5px 5px;
+	text-align: center;
+	font-family: "黑体";
+	font-size: 130%;
+}
+.result ul li span:first-child {
+	display: block;
+	color: #000;
+	font-size: 90%;
+	margin: 11px 0 1px;
+}
+.result ul li span:last-child {
+	color: #ec6500;
+	font-size: 150%;
+	font-weight: bold;
+}
+li[class*="pointer"] {
+	width: 30px;
+}
+li[class*="pointer"] i {
+	display: inline-block;
+	margin-left: 7px;
+	margin-top: 21px;
+}
+li.money {
+	width: 108px;
+}
+li.history {
+	width: 127px;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+li.history i {
+	color: #247cca;
+}
+.result ul li.blue {
+	border-top: 4px solid #247cca;
 }
