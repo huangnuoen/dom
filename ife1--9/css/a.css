@@ -27,6 +27,14 @@ a {
 	cursor: pointer;
 	color: #6e8095;
 }
+table {
+	border-collapse: collapse;
+	font-size: 80%;
+	text-align: center;
+}
+table,td,th {
+	border: 1px solid #c2c2c2;
+}
 body {
 	font-size: 12px;
 	font-family: "SimHei","Microsoft Yahei","Arial";
@@ -289,4 +297,111 @@ li.history i {
 }
 .result ul li.blue {
 	border-top: 4px solid #247cca;
+}
+
+/*统计部分*/
+div.statistics {
+	margin-top: 20px;
+}
+div.statistics h6 {
+	color: #000;
+	font-size: 110%;
+	font-family: "黑体";
+	margin-bottom: 4px;
+}
+div.statistics ul {
+	display: flex;
+	justify-content: space-between;
+}
+div.statistics ul li {
+	width: 175px;
+	height: 70px;
+	border: 1px solid #c2c2c2;
+	padding: 0 15px 0 10px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+div.statistics li span.num span:first-child {
+	display: block;
+	color: #000;
+}
+div.statistics li span.chart {
+	display: inline-block;
+	width: 60px;
+	height: 45px;
+
+}
+div.statistics li.red,
+div.statistics li.green,
+div.statistics li.yellow,
+div.statistics li.blue {
+	border-left-width: 4px;
+}
+div.statistics li.green {
+	border-left-color: #43b29e;
+}
+div.statistics li.red {
+	border-left-color: #d96d5c;
+}
+div.statistics li.yellow {
+	border-left-color: #e2cd46;
+}
+div.statistics li.blue {
+	border-left-color: #388ac1;
+}
+div.statistics li.green span.chart {
+	background-color: #43b29e;
+}
+div.statistics li.red span.chart {
+	background-color: #d96d5c;
+}
+div.statistics li.blue span.chart {
+	background-color: #388ac1;	
+}
+div.statistics li.yellow span.chart {
+	background-color: #e2cd46;
+}
+
+/*项目部分*/
+div.pro-table {
+	width: 526px;
+	background-color: #fff;
+}
+div.pro-table li {
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	border: 1px solid #c2c2c2;
+	border-radius: 5px 5px 0 0;
+	background-color: #eeedec;
+	text-align: center;
+	color: #000;
+	cursor: pointer;
+	line-height: 24px;
+	font-size: 90%;
+}
+div.pro-table .pro-box {
+	width: 488px;
+	height: 275px;
+	margin: 13px 0 25px 18px;
+}
+div.pro-table div.pro-tab {
+	box-sizing: border-box;
+	border: 1px solid #c2c2c2;
+	width: 488px;
+	margin-top: -.5px;/*用上负边距将div向上移，覆盖li*/
+	padding:28px 0 35px 35px;
+}
+div.pro-table ul li.selected {
+	border-bottom-color: #fff;
+	background-color: #fff;
+}
+div.pro-table div table tr {
+	height: 30px;
+	width: 400px;
+}
+div.pro-table div table td {
+	width: 100px;
 }
