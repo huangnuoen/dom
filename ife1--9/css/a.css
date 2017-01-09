@@ -372,7 +372,7 @@ div.pro-table {
 div.pro-table li {
 	display: inline-block;
 	width: 80px;
-	height: 24px;
+	height: 26px;
 	border: 1px solid #c2c2c2;
 	border-radius: 5px 5px 0 0;
 	background-color: #eeedec;
@@ -391,12 +391,14 @@ div.pro-table div.pro-tab {
 	box-sizing: border-box;
 	border: 1px solid #c2c2c2;
 	width: 488px;
-	margin-top: -.5px;/*用上负边距将div向上移，覆盖li*/
+	margin-top: -1px;/*用上负边距将div向上移，被li覆盖*/
 	padding:28px 0 35px 35px;
 }
 div.pro-table ul li.selected {
-	border-bottom-color: #fff;
+	height: 27px;/*比其他li多一个像素。因为下边距被设为无*/
+	border-bottom: none;
 	background-color: #fff;
+	z-index: 1;/*覆盖div*/
 }
 div.pro-table div table tr {
 	height: 30px;
