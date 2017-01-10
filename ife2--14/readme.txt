@@ -1,4 +1,4 @@
-﻿demo:https://huangnuoen.github.io/dom/ife1--14/index.html
+﻿demo:https://huangnuoen.github.io/dom/ife2--14/index.html
 
 向文档中插入新创建元素：
 element.appendChild(newNode);
