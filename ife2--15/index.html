@@ -42,7 +42,7 @@ function getData() {
       var city = oLi[i].innerText.match(/(.+)空气/)[1];
       var num = oLi[i].getElementsByTagName('b')[0].innerText;
       data.push([city,num]);
-      console.log(data);
+ 
   }
 
   /*
@@ -79,7 +79,7 @@ function render(data) {
   var resort = document.getElementById("resort");
   for (var i = 0; i < data.length; i++) {
     var oLi = document.createElement("li");
-    var text = "第" + (i+1) + "名：" + data[0] + "空气质量：" + "<b>" + data[1] + "</b>.";
+    var text = "第" + (i+1) + "名：" + data[i][0] + "空气质量：" + "<b>" + data[i][1] + "</b>。";
     oLi.innerHTML = text;
     resort.appendChild(oLi);
   };
