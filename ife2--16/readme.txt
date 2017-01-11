@@ -13,3 +13,17 @@ A：会。因为aqiData是全局对象，退出函数不会被销毁。
   PS：当新增的属性名与之前的属性名和重复的地方，则新增的属性值会替换掉原来的属性值
 
      （值可重复，属性名重复的话值会被更新）
+
+
+
+Q：第二次调用renderAqiData()时，发生了什么？
+
+A：此时，aqiData对象已经有2组属性值，
+
+   执行renderAqiData()，items又被初始化,items = "<tr>...</tr>"
+
+   for-in循环，items += "<tr><td>"+city+"</td><td>"+aqiData[city]+"</td><td><button>删除</button></td></tr>"
+
+   此时，items = "<tr>...</tr><tr>...</tr><tr>...</tr>"
+
+   for-in结束，使用innerHTML方法将items写入<table>,注意：innerHTML用重写<table>,即原先标签内容将会被替换
