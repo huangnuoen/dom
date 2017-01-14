@@ -27,19 +27,27 @@ function addAqiData() {
         return;
     }
     aqiData[city] = aqi;//为什么不用return
-    console.log(aqiData);
-    console.log(city);
+
 }
 
 /**
  * 渲染aqi-table表格
  */
 function renderAqiList() {
+
+    //当第2次调用该函数 时，items又会被初始化，赋值为如下字符串
     var items = "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+    document.getElementById("aqi-table").innerHTML="<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
     for(var city in aqiData){
-        items += "<tr><td>"+city+"</td><td>"+aqiData[city]+"</td><td><button data-city='"+city+"'>删除</button></td></tr>"
-    }
-    document.getElementById("aqi-table").innerHTML = city ? items : "";
+        var otr = document.createElement("tr");
+        var trText = "<tr><td>"+city+"</td><td>"+aqiData[city]+"</td><td><button data-city='"+city+"'>删除</button></td></tr>"
+        otr.innerHTML=trText;
+        document.getElementById("aqi-table").appendChild(otr)
+    }//不会每次都在原来的基础上增加tr吗？难道是重写table,之前写的tr会被清空？yes
+
+    ; 
+    console.log(document.getElementById("aqi-table").innerHTML);//innerHtml是会重写<table>中的内容，每次调用之前的内容会被代换
+//第二次调用renderAqilist时，对象中已有2个属性，items有3个tr
 }
 
 /**

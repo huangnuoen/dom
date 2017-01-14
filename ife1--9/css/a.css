@@ -365,6 +365,12 @@ div.statistics li.yellow span.chart {
 }
 
 /*项目部分*/
+div.project {
+	display: flex;
+	margin-top: 10px;
+}
+
+/*项目左侧部分*/
 div.pro-table {
 	width: 526px;
 	background-color: #fff;
@@ -407,3 +413,79 @@ div.pro-table div table tr {
 div.pro-table div table td {
 	width: 100px;
 }
+
+/*项目右侧*/
+div.pro-detailed {
+	width: 348px;
+	height: 355px;
+	box-sizing: border-box;
+}
+.pro-detailed div {
+	margin: 12px 34px 0 34px;
+	line-height: 1.6;
+}
+.pro-detailed h6 {
+	font-size: 80%;
+	border-bottom: 1px solid #c2c2c2;
+	text-indent: 10px;
+}
+.pro-detailed h6 span {
+	color: #383d4e;
+	font-size: 100%;
+	display: block;
+}
+h6.in-blo {
+	display: inline-block;
+}
+h6:nth-child(2) {
+	width: 93px;
+	margin-right: -8px;
+	border-right: 1px #c2c2c2 solid;
+}
+h6:nth-child(3) {
+	width: 183px;
+}
+h6:nth-child(4) {
+	height: 145px;
+}
+.pro-detailed form {
+	margin-top: 8px;
+}
+.pro-detailed form label {
+	font-size: 90%;
+}
+.pro-detailed form button {
+	float: right;
+}
+
+/*日历*/
+.calendar {
+	width: 350px;
+}
+
+.calendar table,.calendar tr,.calendar td,.calendar th {
+	border:none;
+	color: #383d4e;
+	font-size: 91%;
+}
+.calendar table {
+	margin: 0 auto;
+}
+.calendar table tr {
+	height: 38px;
+}
+.calendar td,.calendar th {
+	width: 38px;
+}
+.calendar tr span {
+	display: block;
+}
+.calendar table tr:first-child {
+	height: 28px;
+	border-top: 1px solid #d9eaf7;
+	border-bottom: 1px solid #c2c2c2;
+}
+.calendar td span.weekend {
+	color: red;
+}
+
