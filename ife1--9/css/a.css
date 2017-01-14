@@ -286,15 +286,17 @@ li[class*="pointer"] i {
 li.money {
 	width: 108px;
 }
-li.history {
+ul li.history {
 	width: 127px;
 	color: #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 90%;
 }
 li.history i {
 	color: #247cca;
+	font-size: 500%;
 }
 .result ul li.blue {
 	border-top: 4px solid #247cca;
