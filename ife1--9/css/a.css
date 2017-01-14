@@ -116,6 +116,7 @@ header .signin {
 /*内容*/
 section.wrapper {
 	width: 1280px;/*固定宽度*/
+	height: 1213px;
 	margin: 0 auto;
 	display: flex;
 }
@@ -367,6 +368,7 @@ div.statistics li.yellow span.chart {
 /*项目部分*/
 div.project {
 	display: flex;
+	justify-content: space-between;
 	margin-top: 10px;
 }
 
@@ -458,29 +460,75 @@ h6:nth-child(4) {
 	float: right;
 }
 
+/*日历汽车部分*/
+.calendar-car {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
 /*日历*/
 .calendar {
 	width: 350px;
-}
+	height: 356px;
 
-.calendar table,.calendar tr,.calendar td,.calendar th {
-	border:none;
-	color: #383d4e;
-	font-size: 91%;
 }
-.calendar table {
+ /*日历选择*/
+.calendar form{
+	text-align: center;
+	margin: 12px 0;
+}
+.calendar form button {
+	background-color: transparent;
+	width: 60px;
+	border: 1px solid #c2c2c2;
+	font-family: "黑体";
+	line-height: 1.8;
+	cursor: pointer;
+}
+.calendar form select {
+	font-size: 70%;
+	margin-right: 3px;
+}
+.calendar form select:first-child {
+	width: 60px;
+}
+.calendar form select:nth-child(2) {
+	width: 80px;
+}
+.calendar form select:nth-child(3) {
+	width: 70px;
+}
+/*日历表格*/
+.calendar-car .calendar table,
+.calendar-car .calendar tr,
+.calendar-car .calendar td,
+.calendar-car .calendar th {
+	border: none;
+	color: #383d4e;
+	font-size: 90%;
+}
+.calendar table.calendar-table1 {
+	margin: 0 auto;
+	
+}
+.calendar table.calendar-table2 {
+	border-collapse: separate;
 	margin: 0 auto;
 }
-.calendar table tr {
-	height: 38px;
+
+.calendar table.calendar-table2 tr {
+	height: 42px;
 }
+
 .calendar td,.calendar th {
-	width: 38px;
+	width: 45px;
+	box-sizing: border-box;
+	cursor: pointer;
 }
 .calendar tr span {
 	display: block;
 }
-.calendar table tr:first-child {
+.calendar table.calendar-table1 tr {
 	height: 28px;
 	border-top: 1px solid #d9eaf7;
 	border-bottom: 1px solid #c2c2c2;
@@ -488,4 +536,127 @@ h6:nth-child(4) {
 .calendar td span.weekend {
 	color: red;
 }
+.calendar td.selected {
+	border: 1px solid #ffb100;
+}
+.calendar td:hover {
+	border: 1px solid #ffb100;
+}
 
+
+/*car*/
+.car {
+	width: 530px;
+
+}
+.car table {
+	color: #383d4e;
+	margin: 20px 0 20px 40px;
+}
+.car tr {
+	height: 25px;
+}
+.car tr td:first-child,
+.car tr th:first-child {
+	width: 66px;
+}
+.car tr td,
+.car tr th {
+	width: 90px;
+}
+.car tr td:last-child, 
+.car tr th:last-child {
+	width: 290px;
+	text-align: left;
+	text-indent: 25px;
+}
+.car tr td span.amount {
+	display: inline-block;
+	margin-left: 15px;
+	height: 5px;
+}
+.car tr td span:last-child {
+	display: inline-block;
+	height: 5px;
+}
+.car tr:nth-child(2) td span.amount {
+	width: 150px;
+	height: 5px;
+	background-color: #ff9900;
+}
+.car tr:nth-child(2) td span:last-child {
+    background-color: #c2c2c2;
+    width: 30px;
+}
+.car tr:nth-child(3) td span.amount {
+	width: 140px;
+	background-color: #ff9900;
+}
+.car tr:nth-child(3) td span:last-child {
+    background-color: #c2c2c2;
+    width: 40px;
+}
+.car tr:nth-child(4) td span.amount {
+	width: 135px;
+	background-color: #ffbb00;
+}
+.car tr:nth-child(4) td span:last-child {
+    background-color: #c2c2c2;
+    width: 45px;
+}
+.car tr:nth-child(5) td span.amount {
+	width: 120px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(5) td span:last-child {
+    background-color: #c2c2c2;
+    width: 60px;
+}
+.car tr:nth-child(6) td span.amount {
+	width: 115px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(6) td span:last-child {
+    background-color: #c2c2c2;
+    width: 55px;
+}
+.car tr:nth-child(7) td span.amount {
+	width: 110px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(7) td span:last-child {
+    background-color: #c2c2c2;
+    width: 60px;
+}
+.car tr:nth-child(8) td span.amount {
+	width: 100px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(8) td span:last-child {
+    background-color: #c2c2c2;
+    width: 70px;
+}
+.car tr:nth-child(9) td span.amount {
+	width: 95px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(9) td span:last-child {
+    background-color: #c2c2c2;
+    width: 75px;
+}
+.car tr:nth-child(10) td span.amount {
+	width: 90px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(10) td span:last-child {
+    background-color: #c2c2c2;
+    width: 80px;
+}
+.car tr:nth-child(11) td span.amount {
+	width: 80px;
+	background-color: #3871cb;
+}
+.car tr:nth-child(11) td span:last-child {
+    background-color: #c2c2c2;
+    width: 90px;
+}
