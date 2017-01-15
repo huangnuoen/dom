@@ -296,7 +296,7 @@ ul li.history {
 }
 li.history i {
 	color: #247cca;
-	font-size: 500%;
+	font-size: 400%;
 }
 .result ul li.blue {
 	border-top: 4px solid #247cca;
@@ -382,14 +382,14 @@ div.pro-table {
 div.pro-table li {
 	display: inline-block;
 	width: 80px;
-	height: 26px;
+	height: 28px;
 	border: 1px solid #c2c2c2;
 	border-radius: 5px 5px 0 0;
 	background-color: #eeedec;
 	text-align: center;
 	color: #000;
 	cursor: pointer;
-	line-height: 24px;
+	line-height: 28px;
 	font-size: 90%;
 }
 div.pro-table .pro-box {
@@ -405,7 +405,7 @@ div.pro-table div.pro-tab {
 	padding:28px 0 35px 35px;
 }
 div.pro-table ul li.selected {
-	height: 27px;/*比其他li多一个像素。因为下边距被设为无*/
+	height: 29px;/*比其他li多一个像素。因为下边距被设为无*/
 	border-bottom: none;
 	background-color: #fff;
 	z-index: 1;/*覆盖div*/
