@@ -1,0 +1,37 @@
+* {
+	padding: 20px;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px #000 solid;
+}
+div>div {
+	box-sizing: border-box;
+	width: 150px;
+	border: 1px solid #f00;
+	margin-bottom: 20px;
+}
+.one {
+	height: 120px;
+}
+.two {
+	height: 100px;
+}
+.three {
+	height: 40px;
+}
+.four {
+	height: 200px;
+	border-color: #0f0;
+}
+@media (max-width: 640px) {
+div.box {
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.four {
+	order: -1;
+}
+}
