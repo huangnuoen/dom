@@ -32,3 +32,13 @@ https://huangnuoen.github.io/dom/ife2--15/index.html
            newArray.join("")
              
            将该字符串用innerHTML写入<ul>中
+
+方法三：将所有要插入的内容串成字符串，一次性添加到<ul>中
+
+        1、声明字符串items = ""
+
+        2、用for循环遍历，向items中添加包含li内容的字符串
+
+          items += "<li>...</li>"
+
+        3、循环结束，<ul>.innerHTML = items
