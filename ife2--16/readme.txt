@@ -26,4 +26,6 @@ A：此时，aqiData对象已经有2组属性值，
 
    此时，items = "<tr>...</tr><tr>...</tr><tr>...</tr>"
 
-   for-in结束，使用innerHTML方法将items写入<table>,注意：innerHTML用重写<table>,即原先标签内容将会被替换
+   for-in结束，使用innerHTML方法将items写入<table>,注意：
+1、innerHTML用重写<table>,即原先标签内容将会被替换；
+2、向<tabel>插入字符串时，需要先判断input中是否有内容，input有内容才插入items，没有内容则插入空字符串，避免在无输入时出现表头
