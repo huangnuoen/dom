@@ -1,4 +1,5 @@
-﻿
+﻿https://huangnuoen.github.io/dom/ife2--16/index.html
+
 Q：input中的值更新后，aqiData对象中还会保留之前的值吗？
 
 A：会。因为aqiData是全局对象，退出函数不会被销毁。
