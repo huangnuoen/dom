@@ -1,4 +1,6 @@
-ÎªÊ²Ã´»áÔÚgraTimeChange£¨£©ÖĞµ÷ÓÃinitAqichartData()?
+ï»¿demo:https://huangnuoen.github.io/dom/ife2--14/index.html
 
-Ö´ĞĞinitGratimeform()--µ±input[i]µã»÷Ê±£¬pagestate.nowgratime²»±ä£¬ÍË³ö--
-Áîpagetstate.nowgratime¸Ä±ä
+ä¸ºä»€ä¹ˆä¼šåœ¨graTimeChangeï¼ˆï¼‰ä¸­è°ƒç”¨initAqichartData()?
+
+æ‰§è¡ŒinitGratimeform()--å½“input[i]ç‚¹å‡»æ—¶ï¼Œpagestate.nowgratimeä¸å˜ï¼Œé€€å‡º--
+ä»¤pagetstate.nowgratimeæ”¹å˜
