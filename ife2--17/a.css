@@ -1,0 +1,40 @@
+div.aqi-chart-wrap {
+  border-bottom: 1px #000 solid;
+  border-left: 1px #000 solid;
+  position: relative;
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+}
+@keyframes mymove {
+  0% {
+    bottom: -300px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes mymove {
+  0% {
+    bottom: -300px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-moz-keyframes mymove {
+  0% {
+    bottom: -300px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.day,.week,.month {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  animation: mymove .5s ease-out;
+}

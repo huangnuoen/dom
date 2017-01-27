@@ -58,16 +58,22 @@ var dayName = Object.keys(aqiSourceData[pageState.nowSelectCity]);
 /**
  * 渲染图表
  */
+var colors = ['#16324a', '#24385e', '#393f65', '#4e4a67', '#5a4563', '#b38e95','#edae9e', '#c1b9c2', '#bec3cb', '#9ea7bb', '#99b4ce', '#d7f0f8'];
 function renderChart() {
   var wrap = document.getElementsByClassName('aqi-chart-wrap')[0];
   wrap.innerHTML = "";
+  var i = 0;
   for(var h = 0; h < chartData.height.length;h++) {
       var div = document.createElement('div');
       div.title = chartData.x[h] + "  " +chartData.height[h];
       div.className = pageState.nowGraTime;
+      div.style.backgroundColor = colors[i];
       div.style.height = chartData.height[h]/3*2 + "px";
       div.style.width = chartData.w + "px";
+      div.style.left = chartData.w * (h+1) + 8*(h+1) + "px";
       document.getElementsByClassName('aqi-chart-wrap')[0].appendChild(div);
+      i++;
+      if (i > 11) { i = 0;}
   }
 
 
