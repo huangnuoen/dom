@@ -314,6 +314,7 @@ form button {
 	border: 1px solid #E1E1E1;
 	margin: 2%;
 	cursor: pointer;
+	text-indent: -999px;
 }
 .picture div + div ul li:hover,
 .picture div + div ul li:active,
