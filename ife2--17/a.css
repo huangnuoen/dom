@@ -5,9 +5,8 @@ div.aqi-chart-wrap {
   height: 450px;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
-
 }
+/*增加动画效果，定义mymove，并在animation中使用*/
 @keyframes mymove {
   0% {
     bottom: -300px;
@@ -37,4 +36,9 @@ div.aqi-chart-wrap {
   bottom: 0;
   display: inline-block;
   animation: mymove .5s ease-out;
+}
+.title {
+  position: absolute;
+  top: 5px;
+  left: 400px;
 }
