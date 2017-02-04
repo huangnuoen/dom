@@ -37,3 +37,8 @@ div.aqi-chart-wrap {
   display: inline-block;
   animation: mymove .5s ease-out;
 }
+.title {
+  position: absolute;
+  top: 5px;
+  left: 400px;
+}
