@@ -63,6 +63,8 @@ function renderChart() {
   var wrap = document.getElementsByClassName('aqi-chart-wrap')[0];
   wrap.innerHTML = "";
   var i = 0;
+  var title = "<div class='title'>" + pageState.nowSelectCity  + "1~3月空气质量指数图/" + pageState.nowGraTime+ "</div>";
+  document.getElementsByClassName('aqi-chart-wrap')[0].innerHTML = title;
   for(var h = 0; h < chartData.height.length;h++) {
       var div = document.createElement('div');
       div.title = chartData.x[h] + "  " +chartData.height[h];
