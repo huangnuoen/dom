@@ -259,7 +259,9 @@ form button {
 	font-size: 300%;
 	text-align: center;
 	line-height: 1;
-	
+}
+.picture .hide {
+	display: none;
 }
 .picture .bg-img h1 {
 	font-size: 350%;
@@ -314,7 +316,8 @@ form button {
 	cursor: pointer;
 }
 .picture div + div ul li:hover,
-.picture div + div ul li:active {
+.picture div + div ul li:active,
+.picture div + div ul li:visited {
 	background-color: #E1E1E1;
 }
 /*小三角*/
