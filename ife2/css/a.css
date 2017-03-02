@@ -237,7 +237,7 @@ form button {
 	transition: all 2s;
 }
 
-/*第六部分 轮播图*/
+/*第六部分*/
 .picture {
 	position: relative;
 	width: 100%;
@@ -259,11 +259,8 @@ form button {
 	font-size: 300%;
 	text-align: center;
 	line-height: 1;
-	text-indent: -999px;
 }
-.picture .hide {
-	display: none;
-}
+
 .picture .bg-img h1 {
 	font-size: 350%;
 	font-weight: normal;
@@ -315,6 +312,7 @@ form button {
 	border: 1px solid #E1E1E1;
 	margin: 2%;
 	cursor: pointer;
+	text-indent: -999px;
 }
 .picture div + div ul li:hover,
 .picture div + div ul li:active,

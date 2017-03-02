@@ -4,18 +4,6 @@
     <meta charset="utf-8">
 	<title>新世界</title>
 	<link rel="stylesheet" type="text/css" href="css/a.css">
-    <script type="text/javascript" src="scripts/jquery-3.1.1.js"></script>
-    <script>
-    $(function(){
-        $('ul.contrl li').mouseover(function(){
-            var index = $(this).index();
-            console.log(index);
-            $('.picture h2:eq('+index+')').removeClass('hide').siblings("h2").addClass('hide');
-            $('.picture h2:eq('+index+')+p').removeClass('hide').siblings("p").addClass('hide');
-            $('.picture img:eq('+ index +')').removeClass('hide').siblings('img').addClass('hide');
-        })
-    })
-    </script>
 </head>
 <body>
     <div class="container">
@@ -112,8 +100,6 @@
         <!--第六部分（轮播图）-->
         <section class="picture">
         	<img src="images/bg-img.png">
-            <img src="images/09.jpg" class="hide">
-            <img src="images/10.jpg" class="hide">
             <div class="bg-img">
         		<h3>新世界</h3>
         		<h1>TIME</h1>
@@ -123,15 +109,11 @@
         	<div>
         	    <h2>新世界/<span>01</span></h2>
         	    <p>新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界界</p>
-                <h2 class="hide">新世界/<span>02</span></h2>
-                <p class="hide">新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界界</p>
-                <h2 class="hide">新世界/<span>03</span></h2>
-                <p class="hide">新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新新世界新世新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界界</p>
         	    <button>更多详情</button>
         	    <ul class="contrl">
-        	    	<li>1</li>
-        	    	<li>2</li>
-        	    	<li>3</li>
+        	    	<li></li>
+        	    	<li></li>
+        	    	<li></li>
         	    </ul>
         	</div>
         </section>
