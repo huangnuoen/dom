@@ -2,6 +2,9 @@
 	margin: 0 0;
 	padding: 0 0;
 }
+html {
+	background-color: #eee;
+}
 a {
 	text-decoration: none;
 }
@@ -44,26 +47,28 @@ section {
 body {
 	line-height: 1;
 	width: 10rem;
+	max-width: 1300px;
+	margin: 0 auto;
+	background-color: white;
 	font-family: "黑体";
 }
 /*header部分*/
-
+	/*标题*/
 header div {
 	text-align: center;
 	background-color: #91d4da;
 	padding: 0.28rem 0;
-	font-size: 22px;
+	font-size: 0.22rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 header h2, header a {
-	display: inline-block;
 	color: #fff;
 	line-height: 1;
 }
-header a {
-	float: left;
-}
 header h2 {
-	margin-left: -1.8rem;
+	flex-basis: 84%;
 }
 	/*导航部分*/
 nav ul {
@@ -95,15 +100,15 @@ section ul li {
 	align-items: center;
 }
 section .label li{
-	height: 2.9rem;
+	height: 2.94rem;
 	font-size: 0.38rem;
 }
 section .label img {
-	width: 1.14rem;
-	height: 1.14rem;
+	width: 100%;
 }
 section .columns {
 	border-top: 2px solid #eee;
+	overflow: hidden;
 }
 section .columns li {
 	width: 33.3%;
@@ -115,8 +120,8 @@ section .columns li:nth-child(2) {
 	border-right: 2px solid #eee;
 }
 section .columns img {
-	width: 2.94rem;
-	height: 2rem;
+	width: 1.42rem;
+	height: 1.3rem;
 }
 section .columns h5 {
 	font-size: 0.5rem;
@@ -145,7 +150,6 @@ section.module > div {
 	display: flex;
 }
 section.module > div > div {
-	height: 2.24rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -154,6 +158,7 @@ section.module > div > div {
 }
 section.module > div > div div {
 	width: 3.14rem;
+	max-width: 316px;
 	padding: 0.29rem 0;
 	background-color: #f8f8f8;
 	text-align: center;
