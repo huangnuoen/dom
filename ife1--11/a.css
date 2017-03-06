@@ -1,0 +1,204 @@
+* {
+	margin: 0 0;
+	padding: 0 0;
+}
+a {
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+section {
+	border-bottom: 0.36rem solid #f5f5f5;
+}
+@media screen and (max-width: 321px) {
+    body {
+        font-size:16px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+        font-size:17px;
+    }
+}
+@media screen and (min-width: 400px) {
+    body {
+        font-size:19px;
+    }
+}
+@media screen and (max-width: 321px) {
+    header,footer {
+        font-size:16px
+    }
+}
+@media screen and (min-width: 321px) and (max-width:400px) {
+    header,footer {
+        font-size:17px
+    }
+}
+@media screen and (min-width: 400px) {
+    header,footer {
+        font-size:19px
+    }
+}
+body {
+	line-height: 1;
+	width: 10rem;
+	font-family: "黑体";
+}
+/*header部分*/
+
+header div {
+	text-align: center;
+	background-color: #91d4da;
+	padding: 0.28rem 0;
+	font-size: 22px;
+}
+header h2, header a {
+	display: inline-block;
+	color: #fff;
+	line-height: 1;
+}
+header a {
+	float: left;
+}
+header h2 {
+	margin-left: -1.8rem;
+}
+	/*导航部分*/
+nav ul {
+	display: flex;
+	font-size: 0.4rem;
+}
+nav li {
+	width: 20%;
+	text-align: center;
+	padding: 0.28rem 0;
+	border-bottom: 0.08rem solid transparent;
+	cursor: pointer;
+}
+nav li.selected, nav li:hover {
+	border-bottom-color: #91d4da;
+}
+/*section 1*/
+section img.bear {
+	width: 100%;
+}
+section ul {
+	display: flex;
+	justify-content: space-around;
+}
+section ul li {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+section .label li{
+	height: 2.9rem;
+}
+section .label img {
+	width: 1.14rem;
+	height: 1.14rem;
+}
+section .columns {
+	border-top: 2px solid #eee;
+}
+section .columns li {
+	width: 33.3%;
+	height: 3.4rem;
+	margin: 0.36rem 0;
+}
+section .columns li:nth-child(2) {
+	border-left: 2px solid #eee;
+	border-right: 2px solid #eee;
+}
+section .columns img {
+	width: 2.94rem;
+	height: 2rem;
+}
+section .columns h5 {
+	font-size: 0.5rem;
+	padding-bottom: 5px;
+}
+section .columns h6 {
+	font-size: 0.34rem;
+	font-weight: normal;
+}
+/*模块*/
+section.module {
+	padding: 0 0.3rem 0.3rem;
+}
+section.module h2 {
+	font-size: 0.5rem;
+	padding: 0.34rem 0;
+	border-bottom: 2px solid #eee;
+}
+section.module img {
+	width: 2.4rem;
+	height: 2.1rem;
+	margin-right: 0.22rem;
+	border: 1px solid #feb832;
+}
+section.module > div {
+	display: flex;
+}
+section.module > div > div {
+	height: 2.24rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: space-between;
+	font-size: .38rem;
+}
+section.module > div > div div {
+	width: 3.14rem;
+	padding: 0.29rem 0;
+	background-color: #f8f8f8;
+	text-align: center;
+		margin-bottom: 0.24rem;
+
+}
+section.module div.first {
+	margin: .3rem 0 .23rem 0;
+}
+/*article*/
+article.short img {
+	width: 2.74rem;
+	height: 1.92rem;
+	margin-right: 0.26rem;
+}
+article {
+	padding: 0.2rem 0.26rem;
+	border-bottom: 2px solid #eee;
+}
+.short {
+	display: flex;
+}
+.short > div {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+article h3 {
+	font-size: 0.44rem;
+	color: #636363;
+}
+article div.from {
+	color: #c8c8c8;
+	font-size: 0.34rem;
+}
+.long {
+	height: 3.44rem;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+.long img {
+	width: 3.02rem;
+	height: 2.04rem;
+}
+.long div {
+	display: flex;
+	justify-content: space-between;
+}
