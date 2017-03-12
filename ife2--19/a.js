@@ -1,3 +1,7 @@
+var arr = [];
+var snapshots = [];
+var timer;
+
 //验证
 function transValue(input) {
 	if(!(input.value)) {
@@ -21,7 +25,8 @@ function leftIn() {
 	if(!(temp = transValue(input))) {
 		return false;
 	};
-	newEle.style.height = temp + "px";
+	arr.unshift(temp);
+	newEle.style.height = temp * 5 + "px";
 	if(quene.children.length >= 60) {
 		alert("队列已满");
 	} else if(!oldEle) {
@@ -40,7 +45,8 @@ function rightIn(input) {
 	if(!(temp = transValue(input))) {
 		return false;
 	};
-	newEle.style.height = temp + "px";
+	arr.push(temp);
+	newEle.style.height = temp * 5 + "px";
 	if(quene.children.length >= 60) {
 		alert("队列已满");
 	} else {
@@ -56,6 +62,7 @@ function leftOut() {
 	} else {
 		alert(quene.firstChild.offsetHeight);//只读高度
 		quene.removeChild(quene.firstChild);
+		arr.shift();
 	}
 }
 //right out
@@ -66,29 +73,56 @@ function rightOut() {
 	} else {
 		alert(quene.lastChild.offsetHeight);
 		quene.removeChild(quene.lastChild);
+		arr.pop();
 	}
 }
 //mess
-//sort
-function bubbleSort() {
+//可视化排序
+	//排序函数，记录每次变化的快照
+function bubbleSort(arr) {
 	var quene = document.getElementById('result');
-	var li = quene.getElementsByTagName('li');
-	var len = li.length,
+	var lis = quene.getElementsByTagName('li');
+	var len = arr.length,
 		i,
 		temp,
 		j;
-	var time = function() {
-		for(i = len - 1; i > 0; i--) {
-			for(j = 0; j < i; j++) {
-				if(li[j].offsetHeight > li[j+1].offsetHeight) {
-					temp = li[j].offsetHeight;
-					li[j].style.height = li[j+1].offsetHeight + "px";
-					li[j+1].style.height = temp + "px";
-				}
+	
+	for(i = len - 1; i > 0; i--) {
+		for(j = 0; j < i; j++) {
+			if(arr[j] > arr[j+1]) {
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+				snapshots.push(JSON.parse(JSON.stringify(arr)));
 			}
 		}
-	};
-	setInterval(time,2000);
+	}
+	return arr;
+}
+
+//绘图
+function painting() {
+	var container = document.getElementById("result");
+	var lis = [].slice.call(document.getElementsByTagName("li"));//array.prototype.slice能将具有length属性的对象转化为数组，让参数可以使用slice方法
+	for(var i = 0; i < lis.length; i++) {
+		if(lis.length != arr.length) {
+			var aLi = document.createElement("li");
+			container.appendChild(aLi);
+		} else {
+			break;
+		}
+	}
+	var snapshot = snapshots.shift() || [];//移除第一条记录并取得该条记录
+	console.log(snapshot);
+	if(snapshot.length != 0) {
+		for(var i=0; i<lis.length; i++){
+			lis[i].style.height = snapshot[i] * 5 + "px";
+
+		} 
+	} else {
+			clearInterval(timer);//如何在排序完成后停止
+			return;
+	}
 }
 //quene
 function deleteEle(event) {
@@ -106,4 +140,7 @@ document.getElementById('result').addEventListener("click",function(event) {
 		deleteEle(event.target);
 	}
 });
-document.getElementById('sort').addEventListener("click",bubbleSort);
+document.getElementById('sort').addEventListener("click",function() {
+	bubbleSort(arr);//返回排序好arr数组
+	timer = setInterval(painting, 500);
+});
