@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二叉树遍历</title>
+	<style>
+	body {
+		margin: 20px 90px;
+		text-align: center;
+	}
+	div {
+		display: inline-block;
+		border: 1px solid #000;
+	}
+	#root {
+		width: 800px;
+		height: 500px;
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#root .a {
+		width: 380px;
+		height: 450px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.b {
+		width: 160px;
+		height: 400px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.c {
+		width: 50px;
+		height: 300px;
+	}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div class="a left">
+			<div class="b left">
+				<div class="c left"></div>
+				<div class="c right"></div>
+			</div>
+			<div class="b right">
+				<div class="c left"></div>
+				<div class="c right"></div>
+			</div>
+		</div>
+		<div class="a right">
+			<div class="b left">
+				<div class="c left"></div>
+				<div class="c right"></div>
+			</div>
+			<div class="b right">
+				<div class="c left"></div>
+				<div class="c right"></div>
+			</div>
+		</div>
+	</div>
+	<button>先</button>
+	<button>中</button>
+	<button>后</button>
+	<script src="a.js"></script>
+</body>
+</html>
