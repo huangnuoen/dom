@@ -49,3 +49,11 @@ function changeStyle(d) {
 	box.style.transform = 'rotate(0' + d * 90 + 'deg)';
 }
 changeDirect();
+//获取input值
+function getOrder() {
+	var order = document.getElementById('order');
+	var val = order.value.toUpperCase();
+	switch(val) {
+		
+	}
+}
