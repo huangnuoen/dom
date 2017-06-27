@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		.wrapper {
+			margin: 0 auto;
+			position: relative;
+			margin-left: 20%;
+		}
+		.circle {
+			width: 0px;
+			height: 0px;
+			border: 50px pink solid;
+			border-radius: 50%;
+			border-right-color: deeppink;
+			border-bottom-color: deeppink;
+			transform: rotate(-45deg);
+			-webkit-animation: rotate 2s infinite linear;
+			-o-animation: rotate 2s infinite linear;
+			animation: rotate 2s infinite linear;
+			position: absolute;
+			top: 108px;
+			left: 8px;
+			z-index: 2;
+		}
+		.outer {
+			position: absolute;
+			top: 96px;
+			left: -4px;
+			width: 100px;
+			height: 100px;
+			padding: 8px;
+			border: 4px deeppink solid;
+			border-radius: 50%;
+			border-top-color: transparent;
+			animation: turn 1s infinite linear;
+		}
+		.half {
+			width: 0px;
+			height: 0px;
+			border: 50px pink solid;
+			border-radius: 50%;
+			transform: rotate(-45deg);
+		}
+		.half1 {
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+			animation: left 2s infinite linear;
+			position: absolute;
+			top: 108px;
+			left: 8px;
+			z-index: 3;
+		}
+		.half2 {
+			border-color: deeppink;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+			animation: right 2s infinite linear;
+			animation-delay: .5s;
+			position: absolute;
+			top: 108px;
+			left: 8px;
+			z-index: 4;/* 在全圆和粉红上面 */
+		}
+		@keyframes turn {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes left {
+			from {
+				transform: rotate(-45deg);
+				z-index: 3; /* 在全圆上面 */
+			}
+			25% {
+				transform: rotate(135deg);
+				z-index: 4;
+			}
+			50% {
+				transform: rotate(135deg);
+				z-index: 4;
+			}
+			75% {
+				transform: rotate(315deg);
+				z-index: 4;
+			}
+			75.01% {
+				z-index: 1;
+			}
+			to {
+				transform: rotate(315deg);
+				z-index: 1;
+			}
+		}
+		@keyframes right {
+			from {
+				transform: rotate(-45deg);/* 在最上面 */
+				z-index: 3;
+			}
+			25% {
+				transform: rotate(135deg);
+				z-index: 2;/* 在粉红下面 */
+			}
+			50% {
+				transform: rotate(135deg);
+				z-index: 1;
+			}
+			50.01% {
+				transform: rotate(135deg);
+				z-index: 4;
+			}
+			75% {
+				transform: rotate(315deg);
+				z-index: 4;
+			}
+			to {
+				transform: rotate(315deg);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="outer"></div>
+	<div class="circle"></div>
+	<div class="half half1"></div>
+	<div class="half half2"></div>
+</div>
+</body>
+</html>
