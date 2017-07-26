@@ -7,10 +7,10 @@ import named from 'vinyl-named';//文件重命名标记
 import livereload from 'gulp-livereload';//自动刷新
 import plumber from 'gulp-plumber';//处理文件信息流
 import rename from 'gulp-rename';//文件重命名
-import gulify from 'gulp-uglify';//压缩js
+import uglify from 'gulp-uglify';//压缩js
 import {log, colors} from 'gulp-util';//gulp命令输出
 import args from './util/args';
-
+//处理js
 gulp.task('scripts', ()=>{
 	return gulp.src('app/js/index.js')
 		.pipe(plumber({
@@ -36,7 +36,7 @@ gulp.task('scripts', ()=>{
 			basename: 'cp',
 			extname: '.min.js'
 		}))
-		.pipe(uglif                  y({compress:{properties: false},output:{'quote_keys': true}}))
+		.pipe(uglify({compress:{properties: false},output:{'quote_keys': true}}))
 		.pipe(gulp.dest('server/public/js'))
-		.pipe(gulpif(args.watch, livereload()))
+		.pipe(gulpif(args.watch, livereload()));
 })
